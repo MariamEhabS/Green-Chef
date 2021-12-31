@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>Green Chef</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.scss">
+    <!-- script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+	================================================== -->
+
+    <link rel="shortcut icon" href="images/Copy of GreenChef_Logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+   <!-- home
+   ================================================== -->
+   <section id="home" data-parallax="scroll" data-image-src="images/GchefHero.jpg" data-natural-width=900 data-natural-height=450>
+
+        <div class="overlay"></div>
+        <div class="home-content">        
+
+            <div class="row contents">                     
+                <div class="home-content-left">
+
+
+                    <h1 data-aos="fade-up">
+                        Take this Survey for a Chance to test 5 FREE Green Chef Boxes (Worth £219)
+                    </h1>
+                    <!-- <span>And for just participating, you get discounts up to 40% on your first 3 Green Chef Boxes*</span> -->
+                    <div class="buttons" data-aos="fade-up">
+                        <a href="#survey" class="smoothscroll button stroke">
+                            Get Started
+                        </a>
+                    </div>                                         
+
+                </div>
+
+                <div class="home-image-right">
+                    <img src="images/GreenChef_Box_Veggie_Cabbage_Cards_a_frontal_low (2).png" 
+                        data-aos="fade-up">
+
+                    </div>
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <div class="home-scrolldown">
+            <a href="#about" class="scroll-icon smoothscroll">
+                <span>Scroll Down</span>
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </section> <!-- end home -->  
+    <!-- about ================================================== -->
+    <section id="about">
+
+        <div class="row about-intro">
+            <div class="col">
+                <p class="lead" data-aos="fade-up">
+                    And for just participating, you get discounts up to 40% on your first 3 Green Chef Boxes*
+                </p>
+            </div>                       
+        </div>
+        <div  class="row gtr-uniform">
+            <form data-aos="fade-up" id="survey" class="survey" action="" method="POST">
+                <div class="q0">
+                    <h3>Are you interested in testing our subscription of healthy, easy-to-follow recipes that are designed by nutritionists?</h3>
+                        <input name="yesCont" class="option0" type="button" id="yesCont" value="Yes" onclick="surveryStarter()" >
+                        <input name="noCont" class="option0" type="button" id="noCont" value="No" onclick="surveryStarter()">
+                </div>
+                <div class="q1"> 
+                    <h3>What is your preferred diet?</h3>
+                    <div class="dietSections">
+                        <input name="keto" class="option1" type="radio" id="keto">
+                        <label for="keto" onclick="dietOptions()"> 
+                            <img src="images/GC_Gray_Icons_Keto_RGB.png" alt="" > 
+                            <h4>Keto/Low Carb</h4>
+                        </label>
+                    </div>
+                    <div class="dietSections">
+                        <input name="balanced" class="option1" type="radio" id="balanced">
+                        <label for="balanced" onclick="dietOptions()">
+                             <img src="images/GC_Gray_Icons_Balance_RGB.png" alt="" >
+                             <h4>Balanced</h4>
+                         </label>
+                    </div>
+                    <div class="dietSections">
+                        <input name="vegan" class="option1" type="radio" id="vegan">
+                        <label for="vegan" onclick="dietOptions()"> 
+                            <img src="images/GC_Gray_Icons_Vegetarian_RGB.png" alt="">
+                            <h4>Vegan/Vegetarian</h4> 
+                        </label>
+                    </div>
+                </div>
+                <div class="q2"> 
+                    <h3>Would you like to maintain your diet without the hassle of shopping for ingredients and looking for tasty recipes?</h3>
+                    <input name="yesGoals" class="option2" type="button" id="yesConv" value="Yes" onclick="dietGoal()">
+                    <input name="noGoals" class="option2" type="button" id="noConv" value="No" onclick="dietGoal()">
+                </div>
+                <div class="q3"> 
+                    <h3>Please enter your postcode (Check if you qualify)</h3>
+                    <input type="text" id="postCode" placeholder="Postcode" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-times-circle"></i>
+                    <button type="button" id="postCodeCheck">See if You Qualify</button>
+                    <button class="nextPage" type="button" onclick="postalChecker()"><i class="fas fa-long-arrow-alt-right"></i></button>
+                </div>	
+                    <div class="q4">
+                        <h2>CONGRATULATIONS!</h2>
+                        <span>You qualify to enter the competition.</span>
+                        <h3>Now, just leave your details below to enter the competition and claim your discounts.</h3>
+                        <input name="firstName" type="text" id="firstName" placeholder="First Name">
+                        <input name="lastName" type="text" id="lastName" placeholder="Last Name" required>
+                        <input name="email" type="email" id="email" placeholder="Email" required>
+                        <input name="PhoneNum" type="tel" id="phone" placeholder="Phone Number" required>
+                        <div class="checkBoxForm">                    
+                           
+                            <label for="contactMe" class="checking">
+                                <input required name="contactMe" id="contactMe" type="checkbox" class="checkBox">
+                                Yes, Green Chef may contact me via phone.
+                            </label>
+                            
+                            <label for="newsL" class="checking"> <input name="newsL"  id="newsL" type="checkbox" class="checkBox">Yes, I'd like to receive the Green Chef newsletter (optional).</label>
+                     </div>
+ 
+                    </div>
+                    <button type="submit" id="submitButton"> <a href="/css/thankyou.html"></a>Submit</button>
+
+            </form>
+        </div>
+
+        <div class="row about-features">
+
+            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+
+                <div class="bgrid feature" data-aos="fade-up">	
+
+                    <span class="icon"><img src="\images\GC_Gray_Icons_Keto_RGB.png" alt=""></span>            
+
+                    <div class="service-content">	
+
+                        <h3>KETO & LOWER CARB</h3>
+
+                        <p>Enjoy the Delicious flavours you’re used to while keeping your diet low in carbs and rich in good fats and protein.
+                        </p>                       
+                    </div> 	         	 
+                    </div> <!-- /bgrid -->
+                    <div class="bgrid feature" data-aos="fade-up">	
+                        <span class="icon"><img src="\images\GC_Gray_Icons_Balance_RGB.png" alt=""></span>                          
+                    <div class="service-content">	
+                        <h3>Flexitarian</h3>  
+
+                        <p>Get the benefits of a rich, colourful variety of vegetables while staying open to delicious meat and fish options
+                        </p>
+
+                        
+                    </div>	                          
+
+                </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><img src="\images\GC_Gray_Icons_Vegetarian_RGB.png" alt=""></span>		            
+
+                    <div class="service-content">
+                        <h3>VEGAN & VEGETARIAN</h3>
+
+                        <p>Easily cook up nutrient-packed, Vegan-friendly and vegetarian-friendly meals vegetarians. This is perfect for you if you’re a vegan, a vegetarian, or just looking to eat less meat
+                        </p> 
+                            
+                    </div> 	            	               
+
+                </div> <!-- /bgrid -->
+
+            </div> <!-- end features-list -->
+
+        </div> <!-- end about-features -->
+
+
+
+
+        <section id="testimonials">
+
+            <div class="row">
+                <div class="col-twelve">
+                    <h1 class="intro-header" data-aos="fade-up">The Perfect Dinner in Just 3 Steps!</h1>
+                </div>   		
+            </div>   	
+    
+            <div class="row owl-wrap">
+    
+                <div id="testimonial-slider"  data-aos="fade-up">
+    
+                    <div class="slides owl-carousel">
+    
+                        <div>
+                            <div class="testimonial-author">
+                                <img src="\images\GC_Icons_Web-Choos-Cook-Enjoy_CMYK-2.png" alt="Preperation Steps">
+                                <div class="author-info">
+                                    <h2>Choose Your Diet</h2>
+                                </div>
+                        </div>                
+                            <p>
+                                Choose from five dietary preferences
+                            </p> 
+                        </div> 
+                        <div>
+                            <div class="testimonial-author">
+                                <img src="\images\GC_Icons_Web-Choos-Cook-Enjoy_CMYK-3.png" alt="Preperation Steps">
+                                <div class="author-info">
+                                    <h2>Easily Prepare</h2>
+                                </div>
+                            </div>      
+                            <p>
+                                Your box will contain the exact ingredients measured for each recipe, saving you time and preventing food wastage. Just read the recipe cards and follow the step-by-step instructions.
+  
+                            </p>           
+                        </div> 
+                        <div>
+                            <div class="testimonial-author">
+                                <img src="\images\GC_Icons_Web-Choos-Cook-Enjoy_CMYK-1(3).png" alt="Preperation Steps">
+                                <div class="author-info">
+                                    Enjoy!
+                                </div>
+                            </div>      
+                            <p>
+                                And voila!Just like that, you’ve got a restaurant-quality meal that you’ve prepared at home. Now, the only thing you need to worry about is next week’s delicious recipe!   
+                            </p>           
+                        </div> 
+    
+                    </div> <!-- end slides -->
+    
+                </div> <!-- end testimonial-slider -->         
+                
+            </div> <!-- end flex-container -->
+    
+        </section> <!-- end testimonials -->
+        
+
+
+        <div class="row about-bottom-image">
+
+           <img src="images/Box.jpg" 
+            
+                sizes="(max-width: 2800px) 100vw, 2800px"
+                alt="Box picture" data-aos="fade-up">
+
+        </div>  <!-- end about-bottom-image -->       
+        
+    </section> <!-- end about -->  
+   
+
+
+    <!-- Testimonials Section
+    ================================================== -->
+    <section id="testimonials">
+
+        <div class="row">
+            <div class="col-twelve">
+                <h1 class="intro-header" data-aos="fade-up">Hear from our happy customers:</h1>
+            </div>   		
+        </div>   	
+
+        <div class="row owl-wrap">
+
+            <div id="testimonial-slider"  data-aos="fade-up">
+
+                <div class="slides owl-carousel">
+
+                    <div>
+                        <p>
+                        Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                        to do what you believe is great work. And the only way to do great work is to love what you do.
+                        If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+                        </p> 
+
+                        <div class="testimonial-author">
+                                <img src="images/avatars/user-02.jpg" alt="Author image">
+                                <div class="author-info">
+                                    Steve Jobs
+                                </div>
+                        </div>                 
+                    </div> 
+
+                    <div>
+                        <p>
+                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                        nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.    
+                        </p>
+
+                        <div class="testimonial-author">
+                                <img src="images/avatars/user-03.jpg" alt="Author image">
+                                <div class="author-info">
+                                    John Doe
+   
+                                </div>
+                        </div>                                         
+                    </div> 
+
+                </div> <!-- end slides -->
+
+            </div> <!-- end testimonial-slider -->         
+            
+        </div> <!-- end flex-container -->
+
+    </section> <!-- end testimonials -->
+    
+
+    <!-- download
+    ================================================== -->
+    <section id="download">
+
+        <div class="row">
+            <div class="col-full">
+                <h1 class="intro-header"  data-aos="fade-up">Receive a weekly delivery of
+                    delicious premium ingredients
+                    and chef-crafted recipes.</h1>  
+
+                    <div class="buttons" data-aos="fade-up">
+                        <a href="#survey" class="smoothscroll button stroke">
+                            Get Started
+                        </a>
+                    </div>  
+
+                <p class="lead" data-aos="fade-up">
+                    *Discount structure: Get a 40% discount on your 1st
+                    box and a 20% discount on the following 3 boxes.
+                </p>
+
+                <ul class="download-badges">
+                    <li><img src="images\Copy of GreenChef_Logo.svg" alt=""></li>
+                </ul>
+
+            </div>
+        </div>
+        <a data-modal-target="#modal" class="tsandcs">Terms</a>
+
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title"> Terms & Conditions</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+           
+            1. The Organiser
+            The organiser of the Competition is Grocery Delivery E-Services UK LTD t/a Green 
+            Chef of The Fresh Farm, 60 Worship Street, London, EC2A 2EZ (Green Chef or 
+            We/Us). The organizer has commissioned Blue Orange Ltd, Suite
+            1-3 The Hop Exchange 24 Southwark London SE1 1TY ("Agency") to carry out the 
+            competition on behalf of the organizer.
+            2. The Competition
+            2.1 The title of the competition is “Win 5 Weeks of Green Chef” and it is an opportunity 
+            to win 5 Green Chef boxes (Competition)
+            2.2 To enter the Competition you must: 2.2.1 Provide your name, telephone number 
+            and email address; and
+            2.2.2 agree to these terms and conditions (the “Entry”).
+            2.3 You can enter into the Competition from [26/07/2021] at [00:00 GMT] to 
+            [25/01/2022] at [00:00 GMT] (Competition Period). Entries received after this time will 
+            not be valid or considered.
+            2.4 On [25/ 01/ 22](the “Selection Date”) 1 of the eligible Participants in the Competition 
+            will be chosen at random as the winner (the “Winner”) . The decision of Green Chef is 
+            final, and no correspondence or discussion will be entered into with any Participants 
+            about the Winner.
+            3. Eligibility
+            3.1 The Competition is open to all new customers who are UK Residents (excluding The 
+            Scottish Highlands & Islands), aged 18 or over, except employees of Green Chef and its 
+            affiliates, their families, agents or any third party directly associated with administration 
+            of the Competition (each a “Participant”). Existing customers or cancelled or paused 
+            customers are excluded from participation. The prize draw is free to enter and no 
+            purchase is necessary.
+            3.2 The Winner will be notified via TELEPHONE with instructions on how to claim the 
+            Prize and/or Green Chef will contact the Winner personally via the relevant social media 
+            channel used to enter the Competition.
+            3.3 If any selected Winner of the Competition cannot verify its eligibility or fails to 
+            respond to Green Chef’s notification that they have won the competition within 24 
+            HOURS or has breached any of these terms and conditions, Green Chef may choose 
+            another Winner in its place.
+            3.4 Green Chef will disqualify any Competition entries that are considered to be 
+            fraudulent or not in good faith and reserves all rights to disqualify you if your conduct is 
+            contrary to the spirit or intention of the Competition. In entering the Competition, you 
+            confirm that you are eligible to do so and eligible to claim the Prize.
+            4. The Prize
+            4.1 The Winner will receive 5 Green Chef boxes (the “Prize”). The approximate retail 
+            value of the prize is limited to £345. Any Prize details that are not specified will be 
+            determined by Green Chef
+            4.2 The Prize is not negotiable or transferable and must be accepted as awarded. No 
+            cash or other substitution may be made, except by Green Chef, who reserves the right 
+            to substitute the Prize with another prize of equal or greater value if the Prize is not 
+            available for any reason.
+            4.3 Green Chef does not accept any responsibility if a Winner is not able to accept the 
+            Prize or fails to claim the Prize in accordance with these terms and conditions.
+            5. General
+            Only one Entry per person for the Competition is permitted. Green Chef reserves the 
+            right to suspend, cancel or amend the Competition, the Prize and/or any of these terms 
+            and conditions without prior notice if it cannot be operated, conducted or completed as 
+            planned and/or due to events or circumstances arising beyond Green Chef’s control, or 
+            otherwise where fraud, abuse, and/or an error (human or computer) affects or could 
+            affect the proper operation of the Competition. Green Chef will always endeavour to 
+            minimise the effect to Participants in order to avoid disappointment. Winners may be 
+            required to provide further identification or documentation to Green Chef in order to 
+            claim their Prize.
+            The Winner may be asked for a photo or video, which, with prior written approval of the 
+            Winner, will later appear on the Facebook pages ́Tester Wanted ́or ́What do we eat 
+            tonight? ' to be posted and published by the agency. In return for organising the 
+            competition, Green Chef is permitted to publish the transmitted videos or photos on the 
+            aforementioned pages. The W inner declares that he has all rights to the photo(s) or 
+            video(s) he has sent. In addition, the organizer and the Agency receive the rights to edit 
+            (in particular electronic image processing in online presence), reproduce , reproduction 
+            by image carriers as well as the right to transfer these rights to third parties. The above 
+            transfers of rights of use are free of charge. Every participant assures that the 
+            publication of his / her photos or videos on Facebook does not violate any third-party 
+            rights. This particularly includes third-party copyrights or personal rights of 
+            photographed people. The participant releases the organizer from third party claims 
+            arising from the violation of such rights and the costs of legal proceedings.
+            Green Chef does not accept responsibility for (i) late, lost or incomplete entries, or 
+            network, computer, hardware or software failures of any kind, which may restrict or 
+            delay the sending or receipt of an Entry; (ii) any postponement, delay, or cancellation of 
+            the Competition; (iii) any loss, changes to, postponement of, or availability of the Prize; 
+            and (iv) any act or default of any third party supplier which is outside Green Chef’s 
+            reasonable control.
+            To the maximum extent permitted under applicable law, Green Chef will not be liable to 
+            a Participant or Winner for any loss, damage, injury or disappointment suffered by it 
+            resulting from entering or taking part in the Competition. Participants and Winners 
+            statutory rights are not affected.
+            As applicable, each Participant hereby assigns all of its right, title and interest in its 
+            Entry, including all associated copyright and exploitation rights, to Green Chef. Each 
+            Participant further acknowledges that Green Chef is in no way obligated to publish or 
+            use the Entry in any way.
+            Participants who do not give correct details, make an entry on someone else’s behalf or 
+            submit more than one entry per person will be disqualified at Green Chef’s discretion. 
+            Entries from agents, third parties, organised group entries, bulk entries or entries 
+            automatically generated by a computer will not be accepted. Green Chef has sole 
+            discretion to determine whether an Entry is eligible. Green Chef reserves the right to 
+            disqualify a Participant where it suspects there has been a breach of these terms and 
+            conditions, where a Participant has gained unfair advantage or used fraudulent means 
+            or where a Participant might, in the reasonable opinion of Green Chef, bring the Green 
+            Chef brand into disrepute.
+            Each of Facebook and Instagram may be used to advertise or promote the Competition. 
+            By entering the Competition, you agree that the Competition is in no way sponsored, 
+            endorsed or administered by, or associated with Facebook or Instagram. Any questions, 
+            comments or complaints regarding the Competition should be directed to Green Chef 
+            and not to Facebook or Instagram.
+            If any provision in these terms and conditions is held, in whole or part, to be invalid or 
+            unenforceable for any reason, the validity of the remaining provisions of these terms 
+            and conditions shall not be affected, and they shall continue to be valid and 
+            enforceable. The invalid or unenforceable provision shall be replaced with a valid 
+            provision which is as similar as possible in substance to the invalid or unenforceable 
+            provision.
+            These terms and conditions shall be governed by English law, and the parties submit to 
+            the non-exclusive jurisdiction of the courts of England and Wales.
+            Privacy Notice
+            Green Chef will use the personal information you provide in connection with this 
+            Competition (for example, to contact you and distribute the Prize) for the purposes of 
+            facilitating the conduct of the Competition and arranging the award of the Prize. By 
+            taking part in the Competition your personal information will be shared with Blue Orange 
+            Ltd involved in the promotion, solely for the purpose of the fulfilment of the Prize. Green 
+            Chef must have information available that indicates that a valid award took place. To 
+            comply with this obligation Green Chef will send the surname and county of major prize 
+            winners and, if applicable copies of their winning entries, to anyone who emails 
+            hello@greenchef.co.uk and ask for the award to be validated. If you object to any or all 
+            of your surname, county and winning entry being made available, please contact Green 
+            Chef hello@greenchef.co.uk. Green Chef must still provide the information and winning 
+            entry to the Advertising Standards Authority on request. Further information about how 
+            Green Chef processes your personal information can be found in our Privacy Policy.
+
+          </div>
+        </div>
+        <div id="overlay"></div>
+        <!-- <a data-modal-target="#modal">Cookies</a>
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title">Example Modal</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+            
+          </div>
+        </div>
+        <div id="overlay"></div> -->
+    </section> <!-- end download -->    
+  
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="https://kit.fontawesome.com/d77c34bcc9.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
