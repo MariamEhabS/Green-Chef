@@ -1645,6 +1645,10 @@
    position: relative;
    bottom: -6px;
  }
+
+ .footerImg{
+   width: 30%;
+ }
  
  
  /* vertical animation */
@@ -2439,8 +2443,8 @@
  #download {
    background: #39b54a;
    color: #b2fabc;
-   padding-top: 12rem;
-   padding-bottom: 12rem;
+   padding-top: 6rem;
+   padding-bottom: 3rem;
    text-align: center;
  }
  
@@ -2458,7 +2462,7 @@
  
  #download .lead {
    color: #b2fabc;
-   margin-top: 4.8rem;
+   margin-top: 0.6rem;
  }
  
  #download .row {

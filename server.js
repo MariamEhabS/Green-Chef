@@ -21,10 +21,7 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
   const formUrl = "https://hookb.in/pzMBJl603ZsRPnrrPr1q"; 
   const { body } = req;
-  const { data: crmResponse } = await axios.post(formUrl, body,
-     {headers: {Location}
-
-  });
+  const { data: crmResponse } = await axios.post(formUrl, body);
 
   res.json(crmResponse);
 });
