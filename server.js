@@ -57,3 +57,48 @@ app.post('/', async (req, res) => {
 app.listen(PORT, () => {
   console.info(`Server running at http://localhost:${PORT}. You better go catch it!`);
 });
+
+
+// { 
+
+//   "Name": "Mr",
+ 
+//   "Name2": "Smith",
+ 
+//   "OtherInfo": "Mr Smith",
+ 
+//   "REF": "123456",
+ 
+//   "ReferenceID": "123436",
+ 
+//   "Supplier": "LeadSupplier ABC",
+ 
+//   "ListID": 2,
+ 
+//   "Cost": 2.6,
+ 
+//   "LeadPhones": [  
+ 
+//         {
+ 
+//                "PhoneNum": "07989137439",  
+ 
+//                "PhoneTypeID": 0,   
+ 
+//                "TimeZoneID": 0,   
+ 
+//                "IsHighPriority": true
+ 
+//         },
+ 
+//         {  
+ 
+//                “PhoneNum": "07741848903",
+ 
+//                "PhoneTypeID": 1,
+ 
+//                "TimeZoneID": 0
+ 
+//         } ]
+ 
+//  }
