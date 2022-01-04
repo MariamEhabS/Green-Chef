@@ -3,7 +3,6 @@ const cors = require('cors');
 const axios = require('axios');
 const app = express();
 const path = require('path');
-// const login = 'RDJtczEyMyE='
 
 require('dotenv').config();
 
@@ -29,7 +28,6 @@ app.post('/', async (req, res) => {
 
     // console.log(apitokenData.TokenKey);
 
-    // const formUrl = "https://hookb.in/pzMBJl603ZsRPnrrPr1q"; 
     const { body } = req;
 
     const {
