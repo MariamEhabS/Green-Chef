@@ -32,11 +32,31 @@ app.post('/', async (req, res) => {
     // const formUrl = "https://hookb.in/pzMBJl603ZsRPnrrPr1q"; 
     const { body } = req;
 
+    const {
+      keto,
+      Name,
+      Name2,
+      email,
+      PhoneNum,
+      contactMe
+    } = body;
+    
+    const usedBody = {
+      keto,
+      Name,
+      Name2,
+      email,
+      contactMe,
+      LeadPhones:[
+        {
+          PhoneNum
+        }
+      ],
+      ListID: 178
+    }
+
     const { data : crmResponse } = await axios.post(`https://${CUSTOMER}.maxcontact.com/webservices/services/LeadManagement/addlead`,
-      {
-        ...body, 
-        "ListID": 178
-      },
+      usedBody,
       {
          headers: 
           {
