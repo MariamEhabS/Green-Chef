@@ -1799,6 +1799,11 @@
      vertical-align: top;
      width: 100%;
    }
+
+   .topHook.lead{
+     padding-top: 3%;
+     line-height: 3rem;
+   }
  }
  
  @media only screen and (max-width: 900px) {
@@ -1846,7 +1851,8 @@
      font-size: 3.6rem;
    }
    .home-image-right {
-     width: 450px;
+     width: 360px;
+     margin-top: 15%;
      margin-bottom: 0%;
  
      margin-left: 18%;
@@ -1884,8 +1890,8 @@
  
    .home-image-right {
      width: 350px;
-     margin-bottom: 0%;
- 
+     margin-bottom: 3%;
+
      margin-left: 18%;
    }
    .scroll-icon {
@@ -1907,7 +1913,7 @@
      font-size: 3rem;
    }
    .home-image-right {
-     width: 330px;
+     width: 270px;
      margin-bottom: 0%;
      margin-left: 15%;
    }
@@ -1956,7 +1962,7 @@
      display: block;
      position: relative;
  
-     width: 250px;
+     width: 228px;
      z-index: 600;
      margin-bottom: 0%;
  
@@ -2513,7 +2519,11 @@
   width: 30%;
 }
  
- 
+.topHook.lead{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #43693d;
+}
  /* ------------------------------------------------------------------- 
   * responsive:
   * download
