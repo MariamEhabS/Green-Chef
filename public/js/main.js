@@ -311,7 +311,9 @@ function is_ukPostCode(str)
 			document.querySelector('.fas.fa-check-circle').style.display = 'inline'
 			document.querySelector('.fas.fa-times-circle').style.display = 'none'
 			postCodeCheck.style.display = 'none'
-			nextPage.style.display = 'inline'
+			setInterval(postalChecker, 1000)
+
+			// nextPage.style.display = 'inline'
 		}
         else
           {
