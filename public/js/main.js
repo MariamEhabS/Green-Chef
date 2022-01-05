@@ -301,7 +301,7 @@ postCodeCheck.addEventListener("click", is_ukPostCode)
 function is_ukPostCode(str)
 
 {
-	str = document.getElementById('postCode').value
+	str = document.getElementById('postCode').value.toUpperCase()
 
  regexp = /^[A-Z]{1,2}[0-9RCHNQ][0-9A-Z]?\s?[0-9][ABD-HJLNP-UW-Z]{2}$|^[A-Z]{2}-?[0-9]{4}$/;
   
