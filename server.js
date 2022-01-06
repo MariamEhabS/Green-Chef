@@ -65,7 +65,9 @@ app.post('/', async (req, res) => {
     );
   
     console.log({crmResponse});
-    res.status(200).json(crmResponse);
+    // res.status(200).json(crmResponse);
+    res.redirect("/thankyou/thankyou.html");
+
   } catch (error) {
     console.log({error});
     res.status(500).send({message:'Submit failed!'})
