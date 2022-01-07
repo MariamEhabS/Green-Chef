@@ -26,8 +26,6 @@ app.post('/', async (req, res) => {
       }
     })
 
-    // console.log(apitokenData.TokenKey);
-
     const { body } = req;
 
     const {
@@ -63,7 +61,6 @@ app.post('/', async (req, res) => {
           }
       }
     );
-  
     console.log({crmResponse});
     res.status(200).json(crmResponse);
     // res.redirect("/thankyou/thankyou.html");
