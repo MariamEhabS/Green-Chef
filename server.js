@@ -67,7 +67,7 @@ app.post('/', async (req, res) => {
       }
     );
     console.log({crmResponse});
-    return res.redirect("public/thankyou.html");
+    return res.redirect("/thankyou.html");
     res.status(200).json(crmResponse);
 
   } catch (error) {
