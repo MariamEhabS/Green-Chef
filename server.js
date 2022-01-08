@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/thankyou', (req,res) => {
-    res.sendFile(__dirname + '/thankyou.html')
+    res.sendFile(__dirname + '/thankyou/thankyou.html')
 })
 
 app.post('/', async (req, res) => {
@@ -67,7 +67,7 @@ app.post('/', async (req, res) => {
       }
     );
     console.log({crmResponse});
-    return res.redirect("/thankyou/thankyou.html");
+    return res.redirect("/thankyou");
     res.status(200).json(crmResponse);
 
   } catch (error) {
