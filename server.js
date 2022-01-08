@@ -3,6 +3,7 @@ const cors = require('cors');
 const axios = require('axios');
 const app = express();
 const path = require('path');
+const { dirname } = require('path');
 
 require('dotenv').config();
 
@@ -16,6 +17,10 @@ const {CUSTOMER, LOGIN, PASSWORD, PORT} = process.env;
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
+})
+
+app.get('/thankyou', (req,res) => {
+    res.sendFile(__dirname + '/thankyou.html')
 })
 
 app.post('/', async (req, res) => {
