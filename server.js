@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/thankyou', (req,res) => {
-    res.sendFile(__dirname + '/thankyou/thankyou.html')
-})
+// app.get('/thankyou', (req,res) => {
+//     res.sendFile(__dirname + '/thankyou/thankyou.html')
+// })
 
 app.post('/', async (req, res) => {
   try {
@@ -67,7 +67,7 @@ app.post('/', async (req, res) => {
       }
     );
     console.log({crmResponse});
-    return res.redirect("/thankyou");
+    return res.redirect("https://google.com");
     res.status(200).json(crmResponse);
 
   } catch (error) {
