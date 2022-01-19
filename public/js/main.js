@@ -273,7 +273,6 @@ const yesGoals = document.getElementById('noGoals')
 const postCodeCheck = document.getElementById('postCodeCheck')
 const nextPage = document.querySelector('.nextPage')
 
-
 const submitBtn = document.querySelector('#submitButton')
 
 function surveryStarter() {
@@ -360,3 +359,7 @@ function closeModal(modal) {
   overlay.classList.remove('active')
 }
 
+myForm.addEventListener('submit', ()=>{
+	submitBtn.setAttribute('disabled', 'disabled')
+	submitBtn.value = 'Please wait...'
+}, false)
