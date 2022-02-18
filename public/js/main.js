@@ -275,6 +275,7 @@ const nextPage = document.querySelector('.nextPage')
 
 const submitBtn = document.querySelector('#submitButton')
 
+
 function surveryStarter() {
 	q0.style.display = 'none'
 	q1.style.display = 'block'
@@ -321,6 +322,37 @@ function is_ukPostCode(str)
 
           }
 }
+
+function phone_number(){
+	const phoneInp = document.getElementById('phone')
+	const numInput = phoneInp.value.replaceAll(' ', '')
+
+	phonNumVal = /^(?:(?:00)?44|0)7(?:[45789]\d{2}|624)\d{6}$/;
+	
+	if(phonNumVal.test(numInput) && numInput != '07777777777'){
+		console.log(('THERES A MATCH'), numInput)
+		document.getElementById('phoneNumInval').style.display = 'none'
+		phoneInp.style.border = '2px solid green'
+		submitBtn.style.background = '#43693d'
+		submitBtn.style.border = '0.3rem solid #43693d'
+		submitBtn.disabled = false
+	}else if(numInput.length === 10 && numInput.split('').at(0) == '7' && numInput != '7777777777'){
+		console.log(('THERES ANOTHER MATCH'), numInput.length)
+		document.getElementById('phoneNumInval').style.display = 'none'
+		phoneInp.style.border = '2px solid green'
+		submitBtn.style.background = '#43693d'
+		submitBtn.style.border = '0.3rem solid #43693d'
+		submitBtn.disabled = false
+	}else{
+		document.getElementById('phoneNumInval').style.display = 'block'
+		console.log(('NOPE'), numInput);
+		phoneInp.style.border = '2px solid red'
+		submitBtn.disabled = true
+		submitBtn.style.background = 'grey'
+		submitBtn.style.border = '0.3rem solid grey'
+	}
+}
+
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')

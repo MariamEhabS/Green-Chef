@@ -166,19 +166,18 @@
                         <input name="Name" type="text" id="firstName" placeholder="First Name">
                         <input name="Name2" type="text" id="lastName" placeholder="Last Name" required>
                         <input name="email" type="email" id="email" placeholder="Email" required>
-                        <input name="PhoneNum" type="tel" id="phone" placeholder="Phone Number" required>
-                        <div class="checkBoxForm">                    
-                           
+                        <div><input name="PhoneNum" type="tel" id="phone" placeholder="Mobile ex.07XXXXXXXXX" onblur="phone_number()" required>
+                        <span id="phoneNumInval">Invalid phone number. Please enter one of the following formats: 07XXXXXXXXX, 7XXXXXXXXX, 447XXXXXXXXX </span>
+                    </div>
+                        <div class="checkBoxForm">                                             
                             <label for="contactMe" class="checking">
                                 <input required name="contactMe" id="contactMe" type="checkbox" class="checkBox">
                                 Yes, Green Chef may contact me via phone.
-                            </label>
-                            
+                            </label>                           
                             <label for="newsL" class="checking"> <input name="newsL"  id="newsL" type="checkbox" class="checkBox">Yes, I'd like to receive the Green Chef newsletter (optional).</label>
                      </div>
- 
                     </div>
-                    <button type="submit" id="submitButton"> <a href="/css/thankyou.html"></a>Submit</button>
+                    <button type="submit" id="submitButton" disabled> <a href="/css/thankyou.html"></a>Submit</button>
             </form>
             <!-- <a data-modal-target="#modal" class="tsandcs">Cookie Policy</a>
 

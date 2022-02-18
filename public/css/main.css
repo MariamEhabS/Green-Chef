@@ -720,13 +720,24 @@
  #submitButton a {
    color: white;
  }
- 
+ #phoneNumInval{
+   display: none;
+   margin: 0;
+   margin-bottom: 6% !important;
+   color: red;
+ }
+ #phone{
+   margin-bottom: 0rem;
+ }
+
+
  /* IE9 and below */
  
  .oldie .ss-custom-select::after {
    display: none;
  }
  
+
  textarea {
    min-height: 25rem;
  }
@@ -1923,6 +1934,11 @@
      margin-bottom: 0%;
      margin-left: 15%;
    }
+   .survey label{
+    margin-top: 5%;
+    margin-bottom: 6%;
+    line-height: 1.4rem;
+  }
    
    .dietSections{
      text-align: center;
@@ -2918,6 +2934,6 @@
   pointer-events: all;
 }
  
-.tsandcs{
-  color: white;
-}
+/* .tsandcs{
+  color: black;
+} */
