@@ -391,7 +391,14 @@ function closeModal(modal) {
   overlay.classList.remove('active')
 }
 
-myForm.addEventListener('submit', ()=>{
+myForm.addEventListener('submit', (event)=>{
+	const isStaticHost = window.location.protocol === 'file:' || window.location.hostname.endsWith('github.io')
+
 	submitBtn.setAttribute('disabled', 'disabled')
-	submitBtn.value = 'Please wait...'
+	submitBtn.textContent = 'Please wait...'
+
+	if (isStaticHost) {
+		event.preventDefault()
+		window.location.href = 'thankyou.html'
+	}
 }, false)
